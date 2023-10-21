@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/techsd/Circuitrocks_ISP4520_Arduino/tree/techsd"
+    "url": "https://github.com/techsd/Circuitrocks_ISP4520_Arduino/"
   },
   "version": "0.1.1",
   "packageRepositories": [
-    "https://github.com/techsd/Circuitrocks_ISP4520_Arduino/blob/techsd/package_circuitrocks_index.json",
-	"https://github.com/techsd/Circuitrocks_ISP4520_Arduino/blob/techsd/manifest.json",
+    "https://github.com/techsd/Circuitrocks_ISP4520_Arduino/blob/master/package_circuitrocks_index.json",
+	"https://github.com/techsd/Circuitrocks_ISP4520_Arduino/blob/master/manifest.json",
 	{
 		"framework-arduinocircuitrocksisp4520": [
         {
-          "url": "https://github.com/techsd/Circuitrocks_ISP4520_Arduino/releases/download/0.1.1/0.1.1.tar.gz",
+          "url": "https://github.com/techsd/Circuitrocks_ISP4520_Arduino/download/0.1.1.tar.gz",
           "sha1": "F1516BD6EC4254E77DBDAD9D9E1137F198B96A45",
           "version": "0.1.1",
           "system": "*"
