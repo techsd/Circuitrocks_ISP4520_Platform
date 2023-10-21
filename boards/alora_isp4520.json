@@ -2,7 +2,46 @@
   "build": {
     "core": "nRF5",
     "cpu": "cortex-m4",
-    "extra_flags": "-DNRF52832_XXAA -DNRF52 -DISP4520",
+    "extra_flags": "
+      -D__SIZEOF_WCHAR_T=4 
+      -D__ARM_ARCH_7EM__ 
+      -D__SES_ARM 
+      -D__ARM_ARCH_FPV4_SP_D16__ 
+      -D__HEAP_SIZE__=8192 
+      -D__SES_VERSION=73000 
+      -D__GNU_LINKER 
+      -DARM_MATH_CM4 
+      -DARM_MATH_BIG_ENDIAN 
+      -D__FPU_PRESENT 
+      -DDEBUG 
+      -D DEBUG_NRF
+      -DNRF52832_XXAA 
+      -DNRF52 
+      -DISP4520 
+      -DNRF52_PAN_74
+      -DSOFT_SE 
+      -DAPP_TIMER_V2
+      -DAPP_TIMER_V2_RTC1_ENABLED
+      -DBLE_STACK_SUPPORT_REQD
+      -DCONFIG_GPIO_AS_PINRESET
+      -DFLOAT_ABI_HARD
+      -DINITIALIZE_USER_SECTIONS
+      -DMBEDTLS_CONFIG_FILE="nrf_crypto_mbedtls_config.h"
+      -DNO_VTOR_CONFIG
+      -DNRF52
+      -DNRF52832_XXAA
+      -DNRF52_PAN_74
+      -DNRF_CRYPTO_MAX_INSTANCE_COUNT=1
+      -DuECC_ENABLE_VLI_API=0
+      -DuECC_OPTIMIZATION_LEVEL=3
+      -DuECC_SQUARE_FUNC=0
+      -DuECC_SUPPORT_COMPRESSED_POINT=0
+      -DuECC_VLI_NATIVE_LITTLE_ENDIAN=1
+      -DARM_MATH_CM4
+      -DNRF_SD_BLE_API_VERSION=6
+      -DS132
+      -DSOFTDEVICE_PRESENT
+      ",
     "f_cpu": "64000000L",
     "hwids": [
       [
@@ -26,6 +65,9 @@
     "ldscript": "nrf52832_s132_v6.ld",
     "mcu": "nrf52832",
     "variant": "alora_isp4520",
+    "zephyr": {
+      "variant": "nrf52dk_nrf52832"
+    }
     "bsp": {
       "name": "circuitrocks"
     },
@@ -40,14 +82,20 @@
     "bluetooth"
   ],
   "debug": {
+    "default_tools": [
+      "jlink"
+    ],
     "jlink_device": "nRF52832_xxAA",
     "onboard_tools": [
+      "cmsis-dap",
       "jlink"
     ],
     "svd_path": "nrf52.svd"
   },
   "frameworks": [
-    "arduino"
+    "arduino",
+    "mbed",
+    "zephyr"
   ],
   "name": "Circuitrocks Alora ISP4520",
   "upload": {
@@ -59,6 +107,10 @@
     "protocols": [
       "jlink",
       "nrfjprog",
+      "stlink",
+      "blackmagic",
+      "cmsis-dap",
+      "mbed",
       "nrfutil"
     ]
   },
