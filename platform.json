@@ -2,24 +2,24 @@
   "name": "circuitrocks",
   "title": "Circuitrocks Alora ISP4520",
   "description": "Circuitrocks is a general distributor of open-source hardware in the Philippines. We were founded in 2015, located in Metro Manila, Philippines. Your source of electronic prototyping and open source hardware.",
-  "url": "https://circuit.rocks/",
-  "homepage": "https://circuit.rocks/",
+  "url": "https://www.insightsip.com/products/combo-smart-modules/isp4520",
+  "homepage": "https://www.insightsip.com",
   "license": "GNU Lesser General Public License",
   "engines": {
     "platformio": "<5"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/beegee-tokyo/Circuitrocks_ISP4520_Arduino"
+    "url": "https://github.com/techsd/Circuitrocks_ISP4520_Arduino/tree/techsd"
   },
   "version": "0.1.1",
   "packageRepositories": [
-    "https://beegee-tokyo.github.io/package_circuitrocks_index.json",
-	"https://beegee-tokyo.github.io/manifest.json",
+    "https://github.com/techsd/Circuitrocks_ISP4520_Arduino/blob/techsd/package_circuitrocks_index.json",
+	"https://github.com/techsd/Circuitrocks_ISP4520_Arduino/blob/techsd/manifest.json",
 	{
 		"framework-arduinocircuitrocksisp4520": [
         {
-          "url": "https://github.com/beegee-tokyo/Circuitrocks_ISP4520_Arduino/archive/0.1.1.tar.gz",
+          "url": "https://github.com/techsd/Circuitrocks_ISP4520_Arduino/releases/download/0.1.1/0.1.1.tar.gz",
           "sha1": "F1516BD6EC4254E77DBDAD9D9E1137F198B96A45",
           "version": "0.1.1",
           "system": "*"

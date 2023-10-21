@@ -69,7 +69,7 @@ bootloader_version = board.get("build.bootloader.version", default_bootloader_ve
 env.Append(
     ASFLAGS=["-x", "assembler-with-cpp"],
 
-    CFLAGS=["-std=gnu11"],
+    CFLAGS=["-std=gnu99"],
 
     CCFLAGS=[
         "-Ofast",
@@ -84,7 +84,7 @@ env.Append(
     CXXFLAGS=[
         "-fno-rtti",
         "-fno-exceptions",
-        "-std=gnu++11",
+        "-std=gnu++99",
         "-fno-threadsafe-statics"
     ],
 
@@ -144,13 +144,21 @@ if "BOARD" in env:
 if board.get("build.cpu") == "cortex-m4":
     env.Append(
         CCFLAGS=[
+            "-mlittle-endian",
             "-mfloat-abi=hard",
             "-mfpu=fpv4-sp-d16",
+            "-mthumb",
+            "-munaligned-access",
+            "-mtp=soft",
             "-u", "_printf_float"
         ],
         LINKFLAGS=[
+            "-mlittle-endian",
             "-mfloat-abi=hard",
             "-mfpu=fpv4-sp-d16",
+            "-mthumb",
+            "-munaligned-access",
+            "-mtp=soft",
             "-u", "_printf_float"
         ]
     )
